@@ -1,0 +1,19 @@
+h1{ 
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 0;
+    background-image: linear-gradient(90deg, #4843f7 20%, #a467ee 60%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+h2{
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    color: #4843f7;
+}
+

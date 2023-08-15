@@ -1,0 +1,40 @@
+li {
+  width: 100%;
+  max-width: 400px;
+  list-style: none;
+  display: flex;
+  box-shadow: 0 0 5px #7874eb;
+  border-radius: 12px;
+  padding: 5px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.text-task {
+  flex: 1;
+  padding: 0 5px;
+  margin: 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  word-break: break-all;
+  text-align: justify;
+}
+
+.completed{
+  text-decoration: line-through;
+}
+
+.svg-close-icon:hover {
+  fill: red;
+  cursor: pointer;
+}
+
+.svg-check-icon{
+  fill: green;
+  cursor: auto;
+}
+.check-icon{
+  cursor: pointer;
+}

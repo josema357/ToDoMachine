@@ -1,0 +1,11 @@
+.Icon-svg-check,
+.Icon-svg-close{
+    cursor: pointer;
+}
+
+.Icon-svg-close:hover{
+    fill: red;
+}
+.Icon-svg-check:hover{
+    fill: green;
+}

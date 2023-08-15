@@ -1,0 +1,80 @@
+.containerCreate {
+  flex: 1;
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #4843f7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  height: 100%;
+  min-height: 230px;
+  box-sizing: border-box;
+  border-radius: 12px;
+}
+
+.title-create,
+.label-create {
+  color: white;
+  margin: 0;
+}
+
+.title-create {
+  font-size: 24px;
+  font-weight: bold;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 20px;
+}
+
+.input-user {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 5px;
+}
+.input-create {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn-create {
+  width: 150px;
+  padding: 10px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: bold;
+  color: #4843f7;
+}
+
+@media (max-width: 500px) {
+  .containerCreate {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 300px) {
+  .btn-create {
+    width: 100%;
+  }
+}
