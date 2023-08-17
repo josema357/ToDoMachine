@@ -3,10 +3,16 @@ import { ToDoCounter } from "../ToDoCounter/ToDoCounter";
 import { ToDoSearch } from "../ToDoSearch/ToDoSearch";
 import { ToDoList } from '../ToDoList/ToDoList';
 import { ToDoItem } from "../ToDoItem/ToDoItem";
+import { ToDoLoading } from '../ToDoLoading/ToDoLoading';
+import { ToDoError } from '../ToDoError/ToDoError';
+import { EmptyToDo } from '../EmptyToDo/EmptyToDo';
+
 import './TaskContainer.css';
 
 function TaskContainerUI(
     {
+    loading,
+    error,
     completedToDos,
     totalToDos,
     searchValue,
@@ -25,6 +31,10 @@ function TaskContainerUI(
       />
 
       <ToDoList>
+        {loading && <ToDoLoading/>}
+        {error && <ToDoError/>}
+        {(!loading && searchedToDos.length===0) && <EmptyToDo/>}
+
         {searchedToDos.map((toDo) => (
           <ToDoItem
             key={toDo.text}

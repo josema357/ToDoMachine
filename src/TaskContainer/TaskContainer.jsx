@@ -4,7 +4,12 @@ import { useLocalStorage } from "../hooks/useLocalStorage";
 
 function TaskContainer() {
 
-  const [toDos, saveToDos]=useLocalStorage('TODOS_V1', []);
+  const {
+    item: toDos,
+    saveItem: saveToDos, 
+    loading, 
+    error
+  }=useLocalStorage('TODOS_V1', []);
   const [searchValue, setSearchValue]=useState('');
 
   const completedToDos=toDos.filter(toDo=>toDo.completed).length;
@@ -33,6 +38,8 @@ function TaskContainer() {
 
   return (
     <TaskContainerUI
+      loading={loading}
+      error={error}
       completedToDos={completedToDos}
       totalToDos={totalToDos}
       searchValue={searchValue}
