@@ -4,7 +4,7 @@ import './ToDoLoading.css';
 function ToDoLoading() {
   return (
     <>
-      <div class="loader"></div>
+      <div className="loader"></div>
     </>
     
   )

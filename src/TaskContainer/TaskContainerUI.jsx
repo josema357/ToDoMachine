@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { ToDoCounter } from "../ToDoCounter/ToDoCounter";
 import { ToDoSearch } from "../ToDoSearch/ToDoSearch";
 import { ToDoList } from '../ToDoList/ToDoList';
@@ -8,27 +8,21 @@ import { ToDoError } from '../ToDoError/ToDoError';
 import { EmptyToDo } from '../EmptyToDo/EmptyToDo';
 
 import './TaskContainer.css';
+import { TodoContext } from '../Context/ToDoContext';
 
-function TaskContainerUI(
-    {
-    loading,
-    error,
-    completedToDos,
-    totalToDos,
-    searchValue,
-    setSearchValue,
-    searchedToDos,
-    completeToDo,
+function TaskContainerUI() {
+  const {
+    loading, 
+    error, 
+    searchedToDos, 
+    completeToDo, 
     deleteToDo
-    }
-) {
+  } = useContext(TodoContext);
+
   return (
     <div className="containerTasks">
-      <ToDoCounter completed={completedToDos} total={totalToDos} />
-      <ToDoSearch 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
+      <ToDoCounter/>
+      <ToDoSearch/>
 
       <ToDoList>
         {loading && <ToDoLoading/>}

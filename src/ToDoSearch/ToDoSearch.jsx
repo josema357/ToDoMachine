@@ -1,7 +1,10 @@
 import "./ToDoSearch.css";
 import search from "../assets/icons/search.svg";
+import { useContext } from "react";
+import { TodoContext } from "../Context/ToDoContext";
 
-function ToDoSearch({searchValue, setSearchValue}) {
+function ToDoSearch() {
+  const {searchValue, setSearchValue} = useContext(TodoContext);
   return (
     <div className="input-container">
       <input

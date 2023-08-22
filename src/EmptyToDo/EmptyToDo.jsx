@@ -2,7 +2,7 @@ import React from 'react'
 
 function EmptyToDo() {
   return (
-    <p>EmptyToDo</p>
+    <p>ToDo no encontrado...</p>
   )
 }
 
