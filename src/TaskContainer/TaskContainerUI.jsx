@@ -9,6 +9,7 @@ import { EmptyToDo } from '../EmptyToDo/EmptyToDo';
 
 import './TaskContainer.css';
 import { TodoContext } from '../Context/ToDoContext';
+import { Modal } from '../Modal/Modal';
 
 function TaskContainerUI() {
   const {
@@ -16,7 +17,8 @@ function TaskContainerUI() {
     error, 
     searchedToDos, 
     completeToDo, 
-    deleteToDo
+    deleteToDo,
+    openModal
   } = useContext(TodoContext);
 
   return (
@@ -39,6 +41,12 @@ function TaskContainerUI() {
           />
         ))}
       </ToDoList>
+
+      {openModal && (
+        <Modal>
+          Mostrar modal
+        </Modal>
+      )}
     </div>
   )
 }

@@ -11,6 +11,7 @@ function ToDoProvider({children}){
         error
     }=useLocalStorage('TODOS_V1', []);
     const [searchValue, setSearchValue]=useState('');
+    const [openModal, setOpenModal]=useState(false);
     
     const completedToDos=toDos.filter(toDo=>toDo.completed).length;
     const totalToDos=toDos.length;
@@ -47,7 +48,9 @@ function ToDoProvider({children}){
                 setSearchValue,
                 searchedToDos,
                 completeToDo,
-                deleteToDo
+                deleteToDo,
+                openModal,
+                setOpenModal
             }
         }>
             {children}
