@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.77928598.css",
-    "main.js": "/static/js/main.7a6c54e9.js",
-    "index.html": "/index.html",
-    "static/media/x-square-fill.svg": "/static/media/x-square-fill.83e9a78b4bcc0260d9ca5abfb80e73b3.svg",
-    "static/media/close.svg": "/static/media/close.007e8c4b561e16b7ca62092ca800fc21.svg",
-    "static/media/search.svg": "/static/media/search.b1f781b99ceaafb9c831949bb54ae3cd.svg",
-    "static/media/check.svg": "/static/media/check.2e3c0f2d87ff4afa3bd712a07963f3cf.svg",
-    "main.77928598.css.map": "/static/css/main.77928598.css.map",
-    "main.7a6c54e9.js.map": "/static/js/main.7a6c54e9.js.map"
+    "main.css": "/ToDoMachine/static/css/main.77928598.css",
+    "main.js": "/ToDoMachine/static/js/main.08a75c0c.js",
+    "index.html": "/ToDoMachine/index.html",
+    "static/media/x-square-fill.svg": "/ToDoMachine/static/media/x-square-fill.83e9a78b4bcc0260d9ca5abfb80e73b3.svg",
+    "static/media/close.svg": "/ToDoMachine/static/media/close.007e8c4b561e16b7ca62092ca800fc21.svg",
+    "static/media/search.svg": "/ToDoMachine/static/media/search.b1f781b99ceaafb9c831949bb54ae3cd.svg",
+    "static/media/check.svg": "/ToDoMachine/static/media/check.2e3c0f2d87ff4afa3bd712a07963f3cf.svg",
+    "main.77928598.css.map": "/ToDoMachine/static/css/main.77928598.css.map",
+    "main.08a75c0c.js.map": "/ToDoMachine/static/js/main.08a75c0c.js.map"
   },
   "entrypoints": [
     "static/css/main.77928598.css",
-    "static/js/main.7a6c54e9.js"
+    "static/js/main.08a75c0c.js"
   ]
 }
