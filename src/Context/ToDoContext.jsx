@@ -12,12 +12,27 @@ function ToDoProvider({children}){
     }=useLocalStorage('TODOS_V1', []);
     const [searchValue, setSearchValue]=useState('');
     const [openModal, setOpenModal]=useState(false);
+    const [textInputModal,setTextInputModal]=useState('');
     
     const completedToDos=toDos.filter(toDo=>toDo.completed).length;
     const totalToDos=toDos.length;
     const searchedToDos=toDos.filter(toDo=>toDo.text.toLowerCase().includes(searchValue.toLowerCase()));
     
-      
+    const addToDo=(text)=>{
+        const newToDos = [...toDos];
+        newToDos.push({
+            text,
+            completed: false,
+        })
+        saveToDos(newToDos);
+    }
+
+    const updateTodo=(text, newText)=>{
+        const newToDos = [...toDos];
+        const toDoIndex = newToDos.findIndex(toDo=>toDo.text === text);
+        newToDos[toDoIndex].text=newText;
+        saveToDos(newToDos);
+    }
     
     const completeToDo=(text)=>{
         const newToDos = [...toDos];
@@ -25,7 +40,7 @@ function ToDoProvider({children}){
           toDo=>toDo.text === text
         );
         newToDos[toDoIndex].completed=true;
-        saveToDos(newToDos)
+        saveToDos(newToDos);
     }
     
     const deleteToDo=(text)=>{
@@ -34,7 +49,7 @@ function ToDoProvider({children}){
           toDo=>toDo.text === text
         );
         newToDos.splice(toDoIndex,1);
-        saveToDos(newToDos)
+        saveToDos(newToDos);
     }
 
     return(
@@ -50,7 +65,11 @@ function ToDoProvider({children}){
                 completeToDo,
                 deleteToDo,
                 openModal,
-                setOpenModal
+                setOpenModal,
+                addToDo,
+                updateTodo,
+                textInputModal,
+                setTextInputModal
             }
         }>
             {children}

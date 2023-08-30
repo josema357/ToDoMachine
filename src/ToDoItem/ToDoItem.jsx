@@ -6,15 +6,23 @@ import { useContext } from "react";
 import { TodoContext } from "../Context/ToDoContext";
 
 function ToDoItem({ text, completed, onComplete, onDelete }) {
-  const {setOpenModal} = useContext(TodoContext);
+  const {setOpenModal, setTextInputModal} = useContext(TodoContext);
+  const handlerPressElement=(e)=>{
+    const textToDo=e.target.textContent;
+    setTextInputModal(textToDo);
+    setOpenModal(state => !state);
+  }
   return (
-    <li onClick={()=> {
-      setOpenModal(state => !state);
-    }}>
+    <li>
       <CompleteIcon 
         completed={completed}
         onComplete={onComplete}/>
-      <p className={`text-task ${completed && "completed"}`}>{text}</p>
+      <p 
+        id="p_text"
+        className={`text-task ${completed && "completed"}`} 
+        onClick={handlerPressElement}>
+          {text}
+      </p>
       <DeleteIcon
         onDelete={onDelete}/>
     </li>

@@ -10,6 +10,7 @@ import { EmptyToDo } from '../EmptyToDo/EmptyToDo';
 import './TaskContainer.css';
 import { TodoContext } from '../Context/ToDoContext';
 import { Modal } from '../Modal/Modal';
+import { TareaModal } from '../Modal/TareaModal/TareaModal';
 
 function TaskContainerUI() {
   const {
@@ -44,7 +45,7 @@ function TaskContainerUI() {
 
       {openModal && (
         <Modal>
-          Mostrar modal
+          <TareaModal/>
         </Modal>
       )}
     </div>
